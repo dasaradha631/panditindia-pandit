@@ -11,6 +11,7 @@ class AppTheme {
   static const String displayFamily = 'Marcellus';
   static const String bodyFamily = 'Poppins';
 
+  /// Status bar over navy chrome (the pandit app is dark by default).
   static const SystemUiOverlayStyle darkStatus = SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.light,
@@ -21,10 +22,10 @@ class AppTheme {
 
   static const SystemUiOverlayStyle lightStatus = SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
-    statusBarIconBrightness: Brightness.dark,
-    statusBarBrightness: Brightness.light,
-    systemNavigationBarColor: AppColors.cream,
-    systemNavigationBarIconBrightness: Brightness.dark,
+    statusBarIconBrightness: Brightness.light,
+    statusBarBrightness: Brightness.dark,
+    systemNavigationBarColor: AppColors.navy,
+    systemNavigationBarIconBrightness: Brightness.light,
   );
 
   static TextTheme _textTheme(Brightness brightness) {
@@ -107,24 +108,24 @@ class AppTheme {
     final ThemeData base = ThemeData(
       useMaterial3: true,
       colorScheme: scheme,
-      scaffoldBackgroundColor: AppColors.cream,
+      scaffoldBackgroundColor: AppColors.navy,
       fontFamily: bodyFamily,
     );
 
     return base.copyWith(
       textTheme: _textTheme(Brightness.light),
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.cream,
+        backgroundColor: AppColors.navy,
         surfaceTintColor: Colors.transparent,
-        foregroundColor: AppColors.ink,
+        foregroundColor: AppColors.onDark,
         elevation: 0,
         centerTitle: true,
-        systemOverlayStyle: lightStatus,
+        systemOverlayStyle: darkStatus,
         titleTextStyle: TextStyle(
           fontFamily: bodyFamily,
           fontSize: 17,
           fontWeight: FontWeight.w600,
-          color: AppColors.ink,
+          color: AppColors.onDark,
         ),
       ),
       dividerTheme: const DividerThemeData(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-/// PanditIndia brand palette taken from the approved website / mobile UI.
+/// PanditIndia design palette (reference design board): deep navy chrome,
+/// Vedic orange accent and clean surfaces.
 class AppColors {
   AppColors._();
 
@@ -10,21 +11,21 @@ class AppColors {
   static const Color primarySoft = Color(0xFFFFF1E3);
   static const Color primaryBorder = Color(0xFFFFE3C8);
 
-  // Brand darks - deep teal / navy used by the website
+  // Brand darks - deep navy chrome used by the pandit screens
   static const Color navy = Color(0xFF0B1B2B);
   static const Color navySoft = Color(0xFF14324A);
   static const Color teal = Color(0xFF0E2A33);
   static const Color maroon = Color(0xFF5C0F1E);
 
-  // Surfaces
-  static const Color cream = Color(0xFFFFF9F1);
+  // Surfaces - white content pages with soft neutral fills
+  static const Color cream = Color(0xFFFFFFFF);
   static const Color surface = Color(0xFFFFFFFF);
-  static const Color surfaceMuted = Color(0xFFFAF3E9);
-  static const Color border = Color(0xFFF0E4D4);
+  static const Color surfaceMuted = Color(0xFFF4F6F8);
+  static const Color border = Color(0xFFE7EAF0);
 
   // Text
-  static const Color ink = Color(0xFF2A1A10);
-  static const Color muted = Color(0xFF7C7167);
+  static const Color ink = Color(0xFF111827);
+  static const Color muted = Color(0xFF6B7280);
   static const Color onDark = Color(0xFFFFFFFF);
   static const Color onDarkMuted = Color(0xFFD9DEE6);
 

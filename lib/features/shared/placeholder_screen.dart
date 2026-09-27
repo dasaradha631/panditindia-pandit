@@ -14,13 +14,8 @@ class PlaceholderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: AppColors.cream,
-      appBar: AppBar(
-        backgroundColor: AppColors.surface,
-        foregroundColor: AppColors.ink,
-        elevation: 0,
-        title: Text(title, style: theme.textTheme.titleMedium),
-      ),
+      backgroundColor: AppColors.navy,
+      appBar: AppBar(title: Text(title)),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(32),
@@ -30,8 +25,8 @@ class PlaceholderScreen extends StatelessWidget {
               Container(
                 width: 76,
                 height: 76,
-                decoration: const BoxDecoration(
-                  color: AppColors.primarySoft,
+                decoration: BoxDecoration(
+                  color: AppColors.navySoft,
                   shape: BoxShape.circle,
                 ),
                 child: Icon(
@@ -43,14 +38,16 @@ class PlaceholderScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 AppStrings.comingSoonTitle,
-                style: theme.textTheme.headlineSmall,
+                style: theme.textTheme.headlineSmall?.copyWith(
+                  color: AppColors.onDark,
+                ),
               ),
               const SizedBox(height: 8),
               Text(
                 AppStrings.comingSoonSubtitle,
                 textAlign: TextAlign.center,
                 style: theme.textTheme.bodyMedium
-                    ?.copyWith(color: AppColors.muted, height: 1.5),
+                    ?.copyWith(color: AppColors.onDarkMuted, height: 1.5),
               ),
             ],
           ),

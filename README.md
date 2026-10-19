@@ -1,20 +1,17 @@
-# PanditIndia Pandit (Companion App)
+# pandit_app
 
-Flutter app for pandits/acharyas on the PanditIndia platform.
-**Stage 1 scaffold only** - the full pandit experience (booking requests,
-availability, earnings, KYC documents, notifications) arrives in later stages.
+A new Flutter project.
 
-## What exists today
+## Getting Started
 
-- Splash with the PanditIndia brand lockup
-- Placeholder routes for login, dashboard, booking requests, availability,
-  earnings, profile/verification and settings
-- Shared theme + design tokens (same palette/fonts as the customer app)
+This project is a starting point for a Flutter application.
 
-```bash
-flutter pub get
-flutter run
-flutter analyze && flutter test
-```
+A few resources to get you started if this is your first Flutter project:
 
-Bundle id: `com.panditindia.pandit` - display name: **PanditIndia Pandit**.
+- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

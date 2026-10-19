@@ -27,14 +27,13 @@ jobs:
 
       - name: Create IPA
         run: |
+          PROJECT_ROOT=$(pwd)
           cd build/ios/iphoneos
-          ls -la
           mkdir -p Payload
           cp -r Runner.app Payload/
-          zip -r ../../../app-release.ipa Payload
-          cd ../../..
+          zip -r "$PROJECT_ROOT/build/app-release.ipa" Payload
+          cd "$PROJECT_ROOT"
           ls -la build/app-release.ipa
-          file build/app-release.ipa
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4

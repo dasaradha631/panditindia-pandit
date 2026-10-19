@@ -19,9 +19,6 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Flutter doctor
-        run: flutter doctor -v
-
       - name: Install dependencies
         run: flutter pub get
 
@@ -31,14 +28,18 @@ jobs:
       - name: Create IPA
         run: |
           cd build/ios/iphoneos
+          ls -la
           mkdir -p Payload
           cp -r Runner.app Payload/
           zip -r ../../../app-release.ipa Payload
           cd ../../..
+          ls -la build/app-release.ipa
+          file build/app-release.ipa
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
           name: pandit-app-ios-ipa
           path: build/app-release.ipa
+          if-no-files-found: error
           retention-days: 30
